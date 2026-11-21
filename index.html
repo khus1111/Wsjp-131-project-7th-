@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project 07 - Grocery Delivery Homepage (Bootstrap 5)</title>
+
+  <!-- Bootstrap 5 CSS via CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-white">
+
+  <!-- ===================== 1. NAVBAR ===================== -->
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top shadow-sm">
+    <div class="container">
+
+      <a class="navbar-brand fw-bold fs-3 text-success" href="#">Blinkit Clone</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+
+        <!-- Delivery info -->
+        <div class="ms-lg-3 my-2 my-lg-0 border-start ps-lg-3">
+          <div class="fw-bold">Delivery in 10 minutes</div>
+          <small class="text-muted">Select your location &#9662;</small>
+        </div>
+
+        <!-- Search -->
+        <form class="d-flex flex-grow-1 mx-lg-4 my-2 my-lg-0" role="search">
+          <input class="form-control bg-light" type="search" placeholder='Search "milk"' aria-label="Search">
+        </form>
+
+        <!-- Right side buttons -->
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+          <li class="nav-item">
+            <a class="btn btn-success w-100" href="#">&#128722; My Cart</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== 2. HERO / BANNER (Carousel) ===================== -->
+  <section class="container my-3">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+
+      <div class="carousel-inner rounded-4">
+        <div class="carousel-item active">
+          <img src="assets/banners/hero-1.jpg" class="d-block w-100" alt="Groceries delivered in minutes">
+        </div>
+        <div class="carousel-item">
+          <img src="assets/banners/hero-2.jpg" class="d-block w-100" alt="Lightning fast delivery">
+        </div>
+        <div class="carousel-item">
+          <img src="assets/banners/hero-3.jpg" class="d-block w-100" alt="Pharmacy at your doorstep">
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ===================== 3. PROMO BANNERS ===================== -->
+  <section class="container my-4">
+    <div class="row g-3">
+      <div class="col-12 col-md-4">
+        <img src="assets/banners/promo-1.jpg" class="img-fluid rounded-4 w-100" alt="Bakery offer">
+      </div>
+      <div class="col-12 col-md-4">
+        <img src="assets/banners/promo-2.jpg" class="img-fluid rounded-4 w-100" alt="Fresh vegetables offer">
+      </div>
+      <div class="col-12 col-md-4">
+        <img src="assets/banners/promo-3.jpg" class="img-fluid rounded-4 w-100" alt="Dairy offer">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 4. PRODUCT CATEGORY GRID ===================== -->
+  <section class="container my-5">
+    <h2 class="h4 fw-bold mb-4">Shop by Category</h2>
+
+    <div class="row row-cols-3 row-cols-sm-4 row-cols-md-5 row-cols-lg-6 g-3 text-center">
+
+      <div class="col"><a href="#" class="text-decoration-none text-dark">
+        <img src="assets/categories/vegetables-fruits.png" class="img-fluid rounded-4 mb-2" alt="Vegetables and Fruits">
+        <div class="small fw-semibold">Vegetables &amp; Fruits</div></a></div>
+
+      <div class="col"><a href="#" class="text-decoration-none text-dark">
+        <img src="assets/categories/dairy-bread-eggs.png" class="img-fluid rounded-4 mb-2" alt="Dairy, Bread and Eggs">
+        <div class="small fw-semibold">Dairy, Bread &amp; Eggs</div></a></div>
+
+      <div class="col"><a href="#" class="text-decoration-none text-dark">
+        <img src="assets/categories/munchies.png" class="img-fluid rounded-4 mb-2" alt="Munchies">
+        <div class="small fw-semibold">Munchies</div></a></div>
+
+      <div class="col"><a href="#" class="text-decoration-none text-dark">
+        <img src="assets/categories/cold-drinks.png" class="img-fluid rounded-4 mb-2" alt="Cold Drinks and Juices">
+        <div class="small fw-semibold">Cold Drinks &amp; Juices</div></a></div>
+
+      <div class="col"><a href="#" class="text-decoration-none text-dark">
+        <img src="assets/categories/instant-frozen.png" class="img-fluid rounded-4 mb-2" alt="Instant and Frozen Food">
+        <div class="small fw-semibold">Instant &amp; Frozen Food</div></a></div>
+
+      <div class="col"><a href="#" class="text-decoration-none text-dark">
+        <img src="assets/categories/tea-coffee.png" class="img-fluid rounded-4 mb-2" alt="Tea, Coffee and Health Drinks">
+        <div class="small fw-semibold">Tea, Coffee &amp; Health Drinks</div></a></div>
+
+      <div class="col"><a href="#" class="text-decoration-none text-dark">
+        <img src="assets/categories/bakery-biscuits.png" class="img-fluid rounded-4 mb-2" alt="Bakery and Biscuits">
+        <div class="small fw-semibold">Bakery &amp; Biscuits</div></a></div>
+
+      <div class="col"><a href="#" class="text-decoration-none text-dark">
+        <img src="assets/categories/sweet-tooth.png" class="img-fluid rounded-4 mb-2" alt="Sweet Tooth">
+        <div class="small fw-semibold">Sweet Tooth</div></a></div>
+
+      <div class="col"><a href="#" class="text-decoration-none text-dark">
+        <img src="assets/categories/atta-rice-dal.png" class="img-fluid rounded-4 mb-2" alt="Atta, Rice and Dal">
+        <div class="small fw-semibold">Atta, Rice &amp; Dal</div></a></div>
+
+      <div class="col"><a href="#" class="text-decoration-none text-dark">
+        <img src="assets/categories/masala-oil.png" class="img-fluid rounded-4 mb-2" alt="Masala, Oil and More">
+        <div class="small fw-semibold">Masala, Oil &amp; More</div></a></div>
+
+      <div class="col"><a href="#" class="text-decoration-none text-dark">
+        <img src="assets/categories/sauces-spreads.png" class="img-fluid rounded-4 mb-2" alt="Sauces and Spreads">
+        <div class="small fw-semibold">Sauces &amp; Spreads</div></a></div>
+
+      <div class="col"><a href="#" class="text-decoration-none text-dark">
+        <img src="assets/categories/chicken-meat-fish.png" class="img-fluid rounded-4 mb-2" alt="Chicken, Meat and Fish">
+        <div class="small fw-semibold">Chicken, Meat &amp; Fish</div></a></div>
+
+      <div class="col"><a href="#" class="text-decoration-none text-dark">
+        <img src="assets/categories/paan-corner.png" class="img-fluid rounded-4 mb-2" alt="Paan Corner">
+        <div class="small fw-semibold">Paan Corner</div></a></div>
+
+      <div class="col"><a href="#" class="text-decoration-none text-dark">
+        <img src="assets/categories/organic-premium.png" class="img-fluid rounded-4 mb-2" alt="Organic and Premium">
+        <div class="small fw-semibold">Organic &amp; Premium</div></a></div>
+
+      <div class="col"><a href="#" class="text-decoration-none text-dark">
+        <img src="assets/categories/baby-care.png" class="img-fluid rounded-4 mb-2" alt="Baby Care">
+        <div class="small fw-semibold">Baby Care</div></a></div>
+
+      <div class="col"><a href="#" class="text-decoration-none text-dark">
+        <img src="assets/categories/pharma-wellness.png" class="img-fluid rounded-4 mb-2" alt="Pharma and Wellness">
+        <div class="small fw-semibold">Pharma &amp; Wellness</div></a></div>
+
+      <div class="col"><a href="#" class="text-decoration-none text-dark">
+        <img src="assets/categories/cleaning.png" class="img-fluid rounded-4 mb-2" alt="Cleaning Essentials">
+        <div class="small fw-semibold">Cleaning Essentials</div></a></div>
+
+      <div class="col"><a href="#" class="text-decoration-none text-dark">
+        <img src="assets/categories/home-office.png" class="img-fluid rounded-4 mb-2" alt="Home and Office">
+        <div class="small fw-semibold">Home &amp; Office</div></a></div>
+
+      <div class="col"><a href="#" class="text-decoration-none text-dark">
+        <img src="assets/categories/personal-care.png" class="img-fluid rounded-4 mb-2" alt="Personal Care">
+        <div class="small fw-semibold">Personal Care</div></a></div>
+
+      <div class="col"><a href="#" class="text-decoration-none text-dark">
+        <img src="assets/categories/pet-care.png" class="img-fluid rounded-4 mb-2" alt="Pet Care">
+        <div class="small fw-semibold">Pet Care</div></a></div>
+
+    </div>
+  </section>
+
+  <!-- ===================== 5. PRODUCT CARDS (Bootstrap Cards) ===================== -->
+  <section class="container my-5">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h2 class="h4 fw-bold mb-0">Dairy, Bread &amp; Eggs</h2>
+      <a href="#" class="text-success fw-semibold text-decoration-none">see all</a>
+    </div>
+
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-3">
+
+      <div class="col">
+        <div class="card h-100 rounded-4">
+          <img src="assets/products/milk.png" class="card-img-top p-2 rounded-5" alt="Fresh Milk">
+          <div class="card-body">
+            <span class="badge text-bg-light border mb-2">&#9201; 10 MINS</span>
+            <h3 class="h6 card-title">Fresh Toned Milk</h3>
+            <p class="card-text small text-muted mb-0">500 ml</p>
+          </div>
+          <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+            <span class="fw-bold">&#8377;29</span>
+            <button type="button" class="btn btn-outline-success btn-sm">ADD</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 rounded-4">
+          <img src="assets/products/bread.png" class="card-img-top p-2 rounded-5" alt="Brown Bread">
+          <div class="card-body">
+            <span class="badge text-bg-light border mb-2">&#9201; 10 MINS</span>
+            <h3 class="h6 card-title">Whole Wheat Bread</h3>
+            <p class="card-text small text-muted mb-0">400 g</p>
+          </div>
+          <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+            <span class="fw-bold">&#8377;45</span>
+            <button type="button" class="btn btn-outline-success btn-sm">ADD</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 rounded-4">
+          <img src="assets/products/eggs.png" class="card-img-top p-2 rounded-5" alt="Farm Eggs">
+          <div class="card-body">
+            <span class="badge text-bg-light border mb-2">&#9201; 10 MINS</span>
+            <h3 class="h6 card-title">Farm Fresh Eggs</h3>
+            <p class="card-text small text-muted mb-0">6 pieces</p>
+          </div>
+          <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+            <span class="fw-bold">&#8377;54</span>
+            <button type="button" class="btn btn-outline-success btn-sm">ADD</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 rounded-4">
+          <img src="assets/products/banana.png" class="card-img-top p-2 rounded-5" alt="Banana">
+          <div class="card-body">
+            <span class="badge text-bg-light border mb-2">&#9201; 10 MINS</span>
+            <h3 class="h6 card-title">Robusta Banana</h3>
+            <p class="card-text small text-muted mb-0">6 pieces</p>
+          </div>
+          <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+            <span class="fw-bold">&#8377;38</span>
+            <button type="button" class="btn btn-outline-success btn-sm">ADD</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 rounded-4">
+          <img src="assets/products/tomato.png" class="card-img-top p-2 rounded-5" alt="Tomato">
+          <div class="card-body">
+            <span class="badge text-bg-light border mb-2">&#9201; 10 MINS</span>
+            <h3 class="h6 card-title">Hybrid Tomato</h3>
+            <p class="card-text small text-muted mb-0">500 g</p>
+          </div>
+          <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+            <span class="fw-bold">&#8377;22</span>
+            <button type="button" class="btn btn-outline-success btn-sm">ADD</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 rounded-4">
+          <img src="assets/products/apple.png" class="card-img-top p-2 rounded-5" alt="Apple">
+          <div class="card-body">
+            <span class="badge text-bg-light border mb-2">&#9201; 10 MINS</span>
+            <h3 class="h6 card-title">Royal Gala Apple</h3>
+            <p class="card-text small text-muted mb-0">4 pieces</p>
+          </div>
+          <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+            <span class="fw-bold">&#8377;120</span>
+            <button type="button" class="btn btn-outline-success btn-sm">ADD</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="container my-5">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h2 class="h4 fw-bold mb-0">Snacks &amp; Munchies</h2>
+      <a href="#" class="text-success fw-semibold text-decoration-none">see all</a>
+    </div>
+
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-3">
+
+      <div class="col">
+        <div class="card h-100 rounded-4">
+          <img src="assets/products/chips.png" class="card-img-top p-2 rounded-5" alt="Potato Chips">
+          <div class="card-body">
+            <span class="badge text-bg-light border mb-2">&#9201; 10 MINS</span>
+            <h3 class="h6 card-title">Classic Salted Chips</h3>
+            <p class="card-text small text-muted mb-0">90 g</p>
+          </div>
+          <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+            <span class="fw-bold">&#8377;20</span>
+            <button type="button" class="btn btn-outline-success btn-sm">ADD</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 rounded-4">
+          <img src="assets/products/cola.png" class="card-img-top p-2 rounded-5" alt="Cold Drink">
+          <div class="card-body">
+            <span class="badge text-bg-light border mb-2">&#9201; 10 MINS</span>
+            <h3 class="h6 card-title">Cola Soft Drink</h3>
+            <p class="card-text small text-muted mb-0">750 ml</p>
+          </div>
+          <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+            <span class="fw-bold">&#8377;40</span>
+            <button type="button" class="btn btn-outline-success btn-sm">ADD</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 rounded-4">
+          <img src="assets/products/noodles.png" class="card-img-top p-2 rounded-5" alt="Instant Noodles">
+          <div class="card-body">
+            <span class="badge text-bg-light border mb-2">&#9201; 10 MINS</span>
+            <h3 class="h6 card-title">Masala Instant Noodles</h3>
+            <p class="card-text small text-muted mb-0">70 g</p>
+          </div>
+          <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+            <span class="fw-bold">&#8377;14</span>
+            <button type="button" class="btn btn-outline-success btn-sm">ADD</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 rounded-4">
+          <img src="assets/products/chocolate.png" class="card-img-top p-2 rounded-5" alt="Chocolate">
+          <div class="card-body">
+            <span class="badge text-bg-light border mb-2">&#9201; 10 MINS</span>
+            <h3 class="h6 card-title">Milk Chocolate Bar</h3>
+            <p class="card-text small text-muted mb-0">50 g</p>
+          </div>
+          <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+            <span class="fw-bold">&#8377;60</span>
+            <button type="button" class="btn btn-outline-success btn-sm">ADD</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 rounded-4">
+          <img src="assets/products/rice.png" class="card-img-top p-2 rounded-5" alt="Basmati Rice">
+          <div class="card-body">
+            <span class="badge text-bg-light border mb-2">&#9201; 10 MINS</span>
+            <h3 class="h6 card-title">Basmati Rice</h3>
+            <p class="card-text small text-muted mb-0">1 kg</p>
+          </div>
+          <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+            <span class="fw-bold">&#8377;110</span>
+            <button type="button" class="btn btn-outline-success btn-sm">ADD</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 rounded-4">
+          <img src="assets/products/avocado.png" class="card-img-top p-2 rounded-5" alt="Avocado">
+          <div class="card-body">
+            <span class="badge text-bg-light border mb-2">&#9201; 10 MINS</span>
+            <h3 class="h6 card-title">Fresh Avocado</h3>
+            <p class="card-text small text-muted mb-0">2 pieces</p>
+          </div>
+          <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+            <span class="fw-bold">&#8377;150</span>
+            <button type="button" class="btn btn-outline-success btn-sm">ADD</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== 6. INFORMATIONAL SECTIONS ===================== -->
+  <section class="bg-light py-5">
+    <div class="container">
+      <h2 class="h4 fw-bold text-center mb-4">Why choose us?</h2>
+      <div class="row g-4 text-center">
+
+        <div class="col-12 col-md-4">
+          <div class="card border-0 shadow-sm h-100 rounded-4">
+            <div class="card-body p-4">
+              <div class="display-4">&#9889;</div>
+              <h3 class="h5 mt-2">Superfast Delivery</h3>
+              <p class="text-muted mb-0">Get your order delivered to your doorstep in just 10 minutes.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="card border-0 shadow-sm h-100 rounded-4">
+            <div class="card-body p-4">
+              <div class="display-4">&#127991;&#65039;</div>
+              <h3 class="h5 mt-2">Best Prices &amp; Offers</h3>
+              <p class="text-muted mb-0">Great prices and daily offers on thousands of products.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="card border-0 shadow-sm h-100 rounded-4">
+            <div class="card-body p-4">
+              <div class="display-4">&#129388;</div>
+              <h3 class="h5 mt-2">Wide Assortment</h3>
+              <p class="text-muted mb-0">Choose from 5000+ products across fresh, snacks, pharmacy and more.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- App download / info strip with Modal trigger -->
+  <section class="container my-5">
+    <div class="row align-items-center bg-success bg-opacity-10 text-dark rounded-4 p-4 g-3">
+      <div class="col-12 col-md-8">
+        <h2 class="h4 fw-bold mb-1">Get the app and order faster</h2>
+        <p class="mb-0 text-muted">Enter your phone number and we will send you the download link.</p>
+      </div>
+      <div class="col-12 col-md-4 text-md-end">
+        <button type="button" class="btn btn-success btn-lg" data-bs-toggle="modal" data-bs-target="#appModal">
+          Get App Link
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal fade" id="appModal" tabindex="-1" aria-labelledby="appModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="appModalLabel">Send app download link</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <label for="phoneInput" class="form-label">Phone number</label>
+          <div class="input-group">
+            <span class="input-group-text">+91</span>
+            <input type="tel" class="form-control" id="phoneInput" placeholder="Enter 10 digit number">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">Send Link</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== 7. FOOTER ===================== -->
+  <footer class="bg-dark text-light pt-5 pb-3">
+    <div class="container">
+      <div class="row g-4">
+
+        <div class="col-12 col-md-4">
+          <h2 class="h4 fw-bold text-success">Blinkit Clone</h2>
+          <p class="text-secondary">A student project built with HTML5 and Bootstrap 5 to practice responsive layouts. This is not the real website.</p>
+        </div>
+
+        <div class="col-6 col-md-2">
+          <h3 class="h6 fw-bold">Useful Links</h3>
+          <ul class="list-unstyled">
+            <li><a href="#" class="link-secondary text-decoration-none">About</a></li>
+            <li><a href="#" class="link-secondary text-decoration-none">Careers</a></li>
+            <li><a href="#" class="link-secondary text-decoration-none">Blog</a></li>
+            <li><a href="#" class="link-secondary text-decoration-none">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <h3 class="h6 fw-bold">Categories</h3>
+          <ul class="list-unstyled">
+            <li><a href="#" class="link-secondary text-decoration-none">Vegetables &amp; Fruits</a></li>
+            <li><a href="#" class="link-secondary text-decoration-none">Dairy, Bread &amp; Eggs</a></li>
+            <li><a href="#" class="link-secondary text-decoration-none">Munchies</a></li>
+            <li><a href="#" class="link-secondary text-decoration-none">Cold Drinks &amp; Juices</a></li>
+          </ul>
+        </div>
+
+        <div class="col-12 col-md-3">
+          <h3 class="h6 fw-bold">Follow us</h3>
+          <div class="d-flex flex-wrap gap-2">
+            <a href="#" class="btn btn-outline-light btn-sm">Facebook</a>
+            <a href="#" class="btn btn-outline-light btn-sm">Instagram</a>
+            <a href="#" class="btn btn-outline-light btn-sm">Twitter</a>
+          </div>
+        </div>
+
+      </div>
+
+      <hr class="border-secondary mt-4">
+      <p class="text-center text-secondary small mb-0">&copy; 2026 Blinkit Clone - Student Project (WSJP-131, Project 07)</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle via CDN (needed for navbar toggle, carousel and modal) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
